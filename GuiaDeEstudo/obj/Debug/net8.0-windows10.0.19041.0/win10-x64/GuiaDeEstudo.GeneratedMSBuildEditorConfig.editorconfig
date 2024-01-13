@@ -18,18 +18,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/AppShell.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.AppShell.xaml
-build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
-build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
-
-[D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
 [D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Resources.Styles.Colors.xaml
@@ -41,3 +29,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/Views/ListaDeCategoriaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Views.ListaDeCategoriaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ListaDeCategoriaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ListaDeCategoriaPage.xaml

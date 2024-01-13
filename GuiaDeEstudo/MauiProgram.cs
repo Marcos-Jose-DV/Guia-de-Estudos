@@ -1,4 +1,6 @@
 ﻿using GuiaDeEstudo.Repositorios;
+using GuiaDeEstudo.ViewModels;
+using GuiaDeEstudo.Views;
 using LiteDB;
 using Microsoft.Extensions.Logging;
 
@@ -16,6 +18,10 @@ namespace GuiaDeEstudo
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 }).RegisterDatabaseAndRepositories();
+
+
+            builder.Services.AddSingleton<ListaDeCategoriaPage>();
+            builder.Services.AddSingleton<ListaDeCategoriaViewModel>();
 
 #if DEBUG
     		builder.Logging.AddDebug();

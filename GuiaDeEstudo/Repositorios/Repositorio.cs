@@ -1,5 +1,4 @@
 ﻿using GuiaDeEstudo.Models;
-using GuiaDeEstudo.Repositorio;
 using LiteDB;
 
 namespace GuiaDeEstudo.Repositorios;

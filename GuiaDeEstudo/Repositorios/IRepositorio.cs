@@ -1,6 +1,4 @@
-﻿
-
-using GuiaDeEstudo.Models;
+﻿using GuiaDeEstudo.Models;
 
 namespace GuiaDeEstudo.Repositorios;
 

@@ -1,12 +1,14 @@
-﻿namespace GuiaDeEstudo
+﻿using GuiaDeEstudo.Views;
+
+namespace GuiaDeEstudo
 {
     public partial class App : Application
     {
-        public App()
+        public App(ListaDeCategoriaPage page)
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = page;
         }
     }
 }
