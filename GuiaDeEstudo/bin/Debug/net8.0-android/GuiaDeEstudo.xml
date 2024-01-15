@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuiaDeEstudo</name>
+    </assembly>
+    <members>
+        <member name="T:GuiaDeEstudo.ViewModels.ListaDeCategoriaViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.ListaDeCategoriaViewModel.Categorias">
+            <inheritdoc cref="F:GuiaDeEstudo.ViewModels.ListaDeCategoriaViewModel._categorias"/>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.ListaDeCategoriaViewModel.IsVisibleForm">
+            <inheritdoc cref="F:GuiaDeEstudo.ViewModels.ListaDeCategoriaViewModel._isVisibleForm"/>
+        </member>
+        <member name="T:GuiaDeEstudo.ViewModels.TemaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.TemaViewModel.Temas">
+            <inheritdoc cref="F:GuiaDeEstudo.ViewModels.TemaViewModel._temas"/>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.TemaViewModel.Nome">
+            <inheritdoc cref="F:GuiaDeEstudo.ViewModels.TemaViewModel._nome"/>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.TemaViewModel.IsRefreshing">
+            <inheritdoc cref="F:GuiaDeEstudo.ViewModels.TemaViewModel._isRefreshing"/>
+        </member>
+        <member name="F:GuiaDeEstudo.ViewModels.TemaViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:GuiaDeEstudo.ViewModels.TemaViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.TemaViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:GuiaDeEstudo.ViewModels.TemaViewModel.Delete(GuiaDeEstudo.Models.Tema)"/>.</summary>
+        </member>
+        <member name="F:GuiaDeEstudo.ViewModels.TemaViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:GuiaDeEstudo.ViewModels.TemaViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:GuiaDeEstudo.ViewModels.TemaViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GuiaDeEstudo.ViewModels.TemaViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Categorias">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Categorias" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsVisibleForm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsVisibleForm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Temas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Temas" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Nome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Nome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Categorias">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Categorias" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsVisibleForm">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsVisibleForm" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Temas">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Temas" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Nome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Nome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+    </members>
+</doc>

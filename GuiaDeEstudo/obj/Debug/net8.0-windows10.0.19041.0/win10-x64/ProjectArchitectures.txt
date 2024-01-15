@@ -1,1 +1,0 @@
-D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\GuiaDeEstudo.csproj;x64

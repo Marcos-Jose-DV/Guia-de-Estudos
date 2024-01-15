@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuiaDeEstudo.Views.TemaPage"
+             Title="{Binding Nome}"
+            
+             xmlns:model="clr-namespace:GuiaDeEstudo.Models"
+             xmlns:converters="clr-namespace:GuiaDeEstudo.Libraries.Converters"
+             Shell.BackgroundColor="Green"
+             Shell.TitleColor="White">
+    <ContentPage.Resources>
+        <converters:PercetualQuestoesConverter x:Key="PercetualQuestoesConverter"/>
+        <converters:PercentualQuestoesBackGroundColorConverter x:Key="PercentualQuestoesBackGroundColorConverter"/>
+    </ContentPage.Resources>
+
+    <RefreshView IsRefreshing="{Binding IsRefreshing}"
+             Command="{Binding RefreshCommand}">
+        
+    
+        <ScrollView >
+        <VerticalStackLayout>
+
+            <Border StrokeShape="RoundRectangle 25" Margin="30" StrokeThickness="0" HeightRequest="50" BackgroundColor="#F7F7F7F7">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Border.GestureRecognizers>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="find.svg" Margin="9,0,0,0" VerticalOptions="Center" HeightRequest="33" WidthRequest="33"/>
+                    <Entry Grid.Row="0" Placeholder="Pesquisar..." PlaceholderColor="#A8A8A8" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Border>
+            <Border  StrokeLineJoin="Round" Margin="10,0,10,0" BackgroundColor="Black" Padding="20">
+                <Label Grid.Column="0" Text="Questões por tema" TextColor="White" FontAttributes="Bold" FontSize="22" HorizontalOptions="Center"/>
+            </Border>
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Temas}" Margin="10,0,10,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Tema">
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                            <SwipeItems >
+                                <SwipeItem Text="Editar"
+                                   IconImageSource="dotnet_bot.png"
+                                   BackgroundColor="LightGreen"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                   CommandParameter="{Binding}" />
+                                <SwipeItem Text="Remover"
+                                   IconImageSource="trash.svg"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                   CommandParameter="{Binding}" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                            <Border StrokeLineJoin="Round">
+                                <Grid ColumnDefinitions="50,*,50,*" BackgroundColor="White">
+                                    <Border StrokeLineJoin="Round" BackgroundColor="Black" Padding="5">
+                                        <CheckBox IsChecked="{Binding Concluido}" Color="White"/>
+                                    </Border>
+                                    <Label Grid.Column="1" Text="{Binding Title}" Margin="5,0" LineBreakMode="TailTruncation" VerticalOptions="Center"/>
+                                    <Grid Grid.Column="3" ColumnDefinitions="30,30,55" HorizontalOptions="End">
+                                        <Label Grid.Column="0" Text="{Binding Realizado}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        <Label Grid.Column="1" Text="{Binding Acerto}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        <Border  Grid.Column="2" StrokeLineJoin="Round" BackgroundColor="{Binding Percentual, Converter={converters:PercentualQuestoesBackGroundColorConverter}}" Padding="10">
+                                            <Label Text="{Binding Percentual,Converter={converters:PercetualQuestoesConverter}}" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </SwipeView>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </RefreshView>
+</ContentPage>

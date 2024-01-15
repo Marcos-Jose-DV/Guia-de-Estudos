@@ -8,4 +8,5 @@ public interface IRepositorio
     void PostCategoria(Categoria categoria);
     void PutCategoria(Categoria categoria);
     void DeleteCategoria(Categoria categoria);
+    void DeleteAll();
 }

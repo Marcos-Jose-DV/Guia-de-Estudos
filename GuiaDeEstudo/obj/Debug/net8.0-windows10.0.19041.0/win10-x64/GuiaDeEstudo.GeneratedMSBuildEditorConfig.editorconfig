@@ -35,3 +35,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Views.ListaDeCategoriaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ListaDeCategoriaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ListaDeCategoriaPage.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/Views/ShellPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Views.ShellPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ShellPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ShellPage.xaml
+
+[D:/Projetos GitHub/C\#/Mobile/AppGuiDeEstudo/GuiaDeEstudo/Views/TemaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GuiaDeEstudo.Views.TemaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TemaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TemaPage.xaml

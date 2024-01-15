@@ -3,19 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuiaDeEstudo.Views.ListaDeCategoriaPage"
              Title="ListaDeCategoriaPage"
-             xmlns:models="clr-namespace:GuiaDeEstudo.Models">
-    <Grid>
-        <CollectionView ItemsSource="{Binding Categorias}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Categoria">
-                    <VerticalStackLayout>
-                        <Border BackgroundColor="Green">
-                            <Label Text="{Binding Name}"/>
+             xmlns:models="clr-namespace:GuiaDeEstudo.Models"
+             xmlns:converts="clr-namespace:GuiaDeEstudo.Libraries.Converters"
+             xmlns:viewmodels="clr-namespace:GuiaDeEstudo.ViewModels"
+             x:Name="PaiPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="Paragrafo1">
+            <Setter  Property="TextColor" Value="White"/>
+            <Setter  Property="FontSize" Value="18"/>
+            <Setter  Property="FontAttributes" Value="Bold"/>
+            <Setter  Property="HorizontalOptions" Value="EndAndExpand"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="BorderStyle">
+            <Setter  Property="BackgroundColor" Value="Black"/>
+            <Setter  Property="Padding" Value="7"/>
+            <Setter  Property="Stroke" Value="White"/>
+            <Setter  Property="StrokeThickness" Value="2"/>
+            <Setter  Property="StrokeLineJoin" Value="Round"/>
+        </Style>
+        <converts:PercetualEstudadoConverter x:Key="PercetualEstudadoConverter"/>
+        <converts:PercetualAEstudadarConverter x:Key="PercetualAEstudadarConverter"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <SearchBar Placeholder="Pesquisa..." Margin="20" HorizontalOptions="FillAndExpand"/>
+
+            <CollectionView ItemsSource="{Binding Categorias}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Black" StrokeThickness="5" Margin="20,10" StrokeLineJoin="Round">
+
+                            <Grid RowDefinitions="70,Auto,70,70" ColumnDefinitions="*,Auto" Margin="1,1">
+
+                                <Border Grid.Row="0"  BackgroundColor="Green" Stroke="White" StrokeThickness="2" StrokeLineJoin="Round">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Padding="10" TextTransform="Uppercase" FontSize="22"/>
+                                        <Button Text="👁️‍🗨️" HorizontalOptions="End" Command="{Binding BindingContext.NavigationCategoriaCommand, Source={x:Reference PaiPage}}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </Border>
+
+                                <Grid Grid.Row="2" ColumnDefinitions="*,Auto">
+                                    <Border Grid.Column="0" Style="{StaticResource BorderStyle}">
+                                        <Label Text="Percentual estudado" Style="{StaticResource Paragrafo1}" />
+                                    </Border>
+                                    <Border Grid.Column="1" Style="{StaticResource BorderStyle}">
+                                        <Label Text="{Binding Tema, Converter={converts:PercetualEstudadoConverter}}"  Style="{StaticResource Paragrafo1}"/>
+                                    </Border>
+                                </Grid>
+
+                                <Grid Grid.Row="3" ColumnDefinitions="*,Auto">
+                                    <Border Grid.Column="0" Style="{StaticResource BorderStyle}">
+                                        <Label Text="Percentual a estudadar" Style="{StaticResource Paragrafo1}" />
+                                    </Border>
+                                    <Border Grid.Column="1" Style="{StaticResource BorderStyle}">
+                                        <Label Text="{Binding Tema, Converter={converts:PercetualAEstudadarConverter}}"  Style="{StaticResource Paragrafo1}"/>
+                                    </Border>
+                                </Grid>
+                            </Grid>
                         </Border>
-                        <Label Text="{Binding ., Converter={}}"/>
-                    </VerticalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

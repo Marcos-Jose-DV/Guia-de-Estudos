@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using GuiaDeEstudo.Models;
 using GuiaDeEstudo.Repositorios;
+using GuiaDeEstudo.Views;
+using System.Windows.Input;
 
 namespace GuiaDeEstudo.ViewModels;
 
@@ -10,74 +12,94 @@ public partial class ListaDeCategoriaViewModel : ObservableObject
     [ObservableProperty]
     List<Categoria> _categorias = new List<Categoria>();
 
+    [ObservableProperty]
+    bool _isVisibleForm;
+
+
+    public ICommand NavigationCategoriaCommand
+        => new Command<Categoria>(NavigationCategoria);
+
+    private async void NavigationCategoria(Categoria categoria)
+    {
+        var navigationParameter = new Dictionary<string, object>
+        {
+            { "Categoria", categoria }
+        };
+        await Shell.Current.GoToAsync($"TemaPage", navigationParameter);
+    }
 
     public ListaDeCategoriaViewModel(IRepositorio repositorio)
     {
         _repositorio = repositorio;
+        //Delete();
         //SeedData();
 
-        Categorias = _repositorio.GetAll();
+        var c = _repositorio.GetAll();
+        Categorias = c;
     }
 
     private void SeedData()
     {
-        var categorias = new Categoria
+        var categoriasPortuguesa = new Categoria
         {
-
-            Id = 1,
-            Name = "Matemática",
+            Name = "Língua Portuguesa",
+            Created = DateTime.UtcNow,
             Tema = new List<Tema>
             {
-                new Tema
-                {
-                    Id = 1,
-                    Title = "Álgebra",
-                    Concluido = true,
-                    Realizado = 10,
-                    Acerto = 8,
-                    Percentual = 80.0
-                },
-                new Tema
-                {
-                    Id = 2,
-                    Title = "Geometria",
-                    Concluido = false,
-                    Realizado = 5,
-                    Acerto = 4,
-                    Percentual = 80.0
-                }
+                new Tema { Title = "Compreensão e Interpretação de Textos", Concluido = true, Realizado = 10, Acerto = 8 },
+                new Tema { Title = "Tipologia Textual", Concluido = false, Realizado = 5, Acerto = 4 },
+                new Tema { Title = "Ortografia", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Gramática", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Literatura", Concluido = true, Realizado = 9, Acerto = 8 },
+                new Tema { Title = "Novo Tema 1", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 2", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 3", Concluido = true, Realizado = 6, Acerto = 5 },
+                new Tema { Title = "Novo Tema 4", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Novo Tema 5", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Novo Tema 6", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 7", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 8", Concluido = true, Realizado = 6, Acerto = 5 },
+                new Tema { Title = "Novo Tema 9", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Novo Tema 10", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Novo Tema 11", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 12", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 13", Concluido = true, Realizado = 6, Acerto = 5 },
             }
         };
-       
-        _repositorio.PostCategoria(categorias);
 
-        categorias = new Categoria
+        _repositorio.PostCategoria(categoriasPortuguesa);
+
+        var categoriasMatematica = new Categoria
         {
-            Id = 2,
-            Name = "Ciências",
+            Name = "Matemática",
+            Created = DateTime.UtcNow,
             Tema = new List<Tema>
-                {
-                    new Tema
-                    {
-                        Id = 3,
-                        Title = "Biologia",
-                        Concluido = true,
-                        Realizado = 8,
-                        Acerto = 7,
-                        Percentual = 87.5
-                    },
-                    new Tema
-                    {
-                        Id = 4,
-                        Title = "Química",
-                        Concluido = false,
-                        Realizado = 3,
-                        Acerto = 2,
-                        Percentual = 66.7
-                    }
-                }
+            {
+                new Tema { Title = "Raiz Quadrada", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Regra de 2", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Álgebra", Concluido = true, Realizado = 6, Acerto = 5 },
+                new Tema { Title = "Geometria", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Trigonometria", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Novo Tema 1", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 2", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 3", Concluido = true, Realizado = 6, Acerto = 5 },
+                new Tema { Title = "Novo Tema 4", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Novo Tema 5", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Novo Tema 6", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 7", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 8", Concluido = true, Realizado = 6, Acerto = 5 },
+                new Tema { Title = "Novo Tema 9", Concluido = false, Realizado = 4, Acerto = 3 },
+                new Tema { Title = "Novo Tema 10", Concluido = true, Realizado = 7, Acerto = 6 },
+                new Tema { Title = "Novo Tema 11", Concluido = true, Realizado = 8, Acerto = 7 },
+                new Tema { Title = "Novo Tema 12", Concluido = false, Realizado = 3, Acerto = 2 },
+                new Tema { Title = "Novo Tema 13", Concluido = true, Realizado = 6, Acerto = 5 },
+            }
         };
 
-        _repositorio.PostCategoria(categorias);
+        _repositorio.PostCategoria(categoriasMatematica);
+    }
+    void Delete()
+    {
+        _repositorio.DeleteAll();
     }
 }

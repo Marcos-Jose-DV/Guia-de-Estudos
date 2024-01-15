@@ -17,7 +17,7 @@ public class Repositorio : IRepositorio
         return _database
               .GetCollection<Categoria>(collectionName)
               .Query()
-              .OrderByDescending(x => x.Id)
+              .OrderByDescending(x => x.Created)
               .ToList();
     }
 
@@ -25,7 +25,7 @@ public class Repositorio : IRepositorio
     {
         var col = _database.GetCollection<Categoria>(collectionName);
         col.Insert(categoria);
-        col.EnsureIndex(x => x.Id);
+        col.EnsureIndex(x => x.Created);
     }
 
     public void PutCategoria(Categoria categoria)

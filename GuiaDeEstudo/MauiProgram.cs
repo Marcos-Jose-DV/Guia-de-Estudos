@@ -22,6 +22,10 @@ namespace GuiaDeEstudo
 
             builder.Services.AddSingleton<ListaDeCategoriaPage>();
             builder.Services.AddSingleton<ListaDeCategoriaViewModel>();
+            builder.Services.AddSingleton<TemaPage>();
+            builder.Services.AddSingleton<TemaViewModel>();
+
+            Routing.RegisterRoute(nameof(TemaPage), typeof(TemaPage));
 
 #if DEBUG
     		builder.Logging.AddDebug();
