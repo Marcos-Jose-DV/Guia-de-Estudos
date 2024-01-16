@@ -276,7 +276,6 @@ D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-androi
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Numerics.dll
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Numerics.Vectors.dll
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.ObjectModel.dll
-D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Private.DataContractSerialization.dll
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Private.Uri.dll
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Private.Xml.dll
@@ -1050,3 +1049,4 @@ D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-androi
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\trash.png
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\resizetizer\r\drawable-xxhdpi\trash.png
 D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\resizetizer\r\drawable-xxxhdpi\trash.png
+D:\Projetos GitHub\C#\Mobile\AppGuiDeEstudo\GuiaDeEstudo\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll

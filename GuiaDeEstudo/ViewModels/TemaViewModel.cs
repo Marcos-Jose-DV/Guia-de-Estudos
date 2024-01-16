@@ -9,11 +9,11 @@ namespace GuiaDeEstudo.ViewModels;
 public partial class TemaViewModel : ObservableObject, IQueryAttributable
 {
     private readonly IRepositorio _repositorio;
+    private Categoria _categoria;
 
     [ObservableProperty]
     ObservableCollection<Tema> _temas;
 
-    Categoria _categoria;
 
     [ObservableProperty]
     string _nome;
@@ -28,6 +28,7 @@ public partial class TemaViewModel : ObservableObject, IQueryAttributable
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
         _categoria = (Categoria)query["Categoria"];
+
         Refresh();
     }
     void Load()
@@ -39,7 +40,7 @@ public partial class TemaViewModel : ObservableObject, IQueryAttributable
     [RelayCommand]
     async Task Delete(Tema tema)
     {
-        bool result = await Application.Current.MainPage.DisplayAlert("Apagar", "Deseja excluir esse tema?", "Sim", "Não");
+        bool result = await Application.Current.MainPage.DisplayAlert("Excluir", "Deseja excluir esse tema?", "Sim", "Não");
 
         if (result)
         {
@@ -62,5 +63,4 @@ public partial class TemaViewModel : ObservableObject, IQueryAttributable
             IsRefreshing = false;
         }
     }
-   
 }

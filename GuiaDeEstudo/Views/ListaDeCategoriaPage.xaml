@@ -28,8 +28,15 @@
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
-            <SearchBar Placeholder="Pesquisa..." Margin="20" HorizontalOptions="FillAndExpand"/>
-
+            <Border StrokeShape="RoundRectangle 25" Margin="30" StrokeThickness="0" HeightRequest="50" BackgroundColor="#F7F7F7F7">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Border.GestureRecognizers>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="find.svg" Margin="9,0,0,0" VerticalOptions="Center" HeightRequest="33" WidthRequest="33"/>
+                    <Entry Grid.Row="0" Placeholder="Pesquisar..." PlaceholderColor="#A8A8A8" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Border>
             <CollectionView ItemsSource="{Binding Categorias}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

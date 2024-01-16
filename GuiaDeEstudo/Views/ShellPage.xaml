@@ -6,6 +6,7 @@
              xmlns:pages="clr-namespace:GuiaDeEstudo.Views">
     <TabBar>
         <ShellContent Title="Lista Page" 
-                      ContentTemplate="{DataTemplate pages:ListaDeCategoriaPage}"/>
+                      ContentTemplate="{DataTemplate pages:ListaDeCategoriaPage}"
+                      Route="ListaDeCategoriaPage"/>
     </TabBar>
 </Shell>
